@@ -3,24 +3,22 @@
 /* Font Syne */
 @import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700&display=swap');
 
-:root {
-	/* Color */
-	--red-color: #eb4b4d;
-	--purple-color: #c2679e;
-	--green-color: #199f84;
-	--text-color: #515361;
-	--white-color: #ffffff;
-	--black-color: #000000;
-	--dark-color: #2a2c37;
-	--bg-color: #f5f7fa;
+/* Color */
+$red-color: #eb4b4d;
+$purple-color: #c2679e;
+$green-color: #199f84;
+$text-color: #515361;
+$white-color: #ffffff;
+$black-color: #000000;
+$dark-color: #2a2c37;
+$bg-color: #f5f7fa;
 
-	/* Font */
-	--primary-font: 'DM Sans', sans-serif;
-	--secondary-font: 'Syne', sans-serif;
+/* Font */
+$primary-font: 'DM Sans', sans-serif;
+$secondary-font: 'Syne', sans-serif;
 
-	/* Breakpoint */
-	--mobile-breakpoint: 576px;
-}
+/* Breakpoint */
+$mobile-breakpoint: 576px;
 
 * {
 	margin: 0;
@@ -35,7 +33,7 @@
 
 a {
 	display: inline-block;
-	color: var(--dark-color);
+	color: $dark-color;
 	text-decoration: none;
 }
 
@@ -49,9 +47,9 @@ img {
 }
 
 html {
-	font-family: var(--primary-font);
+	font-family: $primary-font;
 	font-size: 14px;
-	background-color: var(--bg-color);
+	background-color: $bg-color;
 	overflow-x: hidden;
 }
 
@@ -72,7 +70,7 @@ html {
 	align-items: center;
 }
 
-@media only screen and (max-width: 576px) {
+@media only screen and (max-width: $mobile-breakpoint) {
 	.container {
 		padding: 0 40px;
 	}
