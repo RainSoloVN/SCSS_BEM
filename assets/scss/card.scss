@@ -21,17 +21,17 @@
 				position: relative;
 				height: 45px;
 				width: 45px;
+			}
 
-				.square {
-					width: 30px;
-					height: 30px;
-					background-color: $white-color;
-					border: 1px solid #e0e2e7;
-					border-radius: 4px;
-					opacity: 0.5;
-				}
+			&__square {
+				width: 30px;
+				height: 30px;
+				background-color: $white-color;
+				border: 1px solid #e0e2e7;
+				border-radius: 4px;
+				opacity: 0.5;
 
-				.square:nth-child(2) {
+				&--red {
 					position: absolute;
 					left: 33.3%;
 					top: 33.3%;
@@ -102,15 +102,18 @@
 }
 
 .btn {
-	border: 1px solid $dark-color;
-	background-color: $dark-color;
-	color: $white-color;
 	padding: 18px 36px;
+	border: 1px solid $dark-color;
 	border-radius: 10px;
 	min-width: 120px;
 
-	@media only screen and (max-width: $mobile-breakpoint) {
-		width: 100%;
+	&--primary {
+		background-color: $dark-color;
+		color: $white-color;
+
+		@media only screen and (max-width: $mobile-breakpoint) {
+			width: 100%;
+		}
 	}
 
 	&--secondary {
@@ -128,7 +131,6 @@
 		}
 
 		@media only screen and (max-width: $mobile-breakpoint) {
-			width: unset;
 			margin-right: 50px;
 		}
 	}
@@ -290,6 +292,27 @@
 
 			&--circle {
 				position: relative;
+
+				.circle {
+					width: 16px;
+					height: 16px;
+					border-radius: 50%;
+
+					&--dark {
+						background-color: $dark-color;
+					}
+
+					&--light {
+						background-color: #d6d0d0;
+						opacity: 0.8;
+					}
+
+					&--absolute {
+						position: absolute;
+						top: 0;
+						left: 60%;
+					}
+				}
 			}
 		}
 
@@ -312,21 +335,6 @@
 			align-items: center;
 			padding: 0 30px 30px;
 			color: $white-color;
-
-			.circle {
-				width: 16px;
-				height: 16px;
-				background-color: $dark-color;
-				border-radius: 50%;
-			}
-
-			.circle:nth-child(2) {
-				position: absolute;
-				top: 0;
-				left: 60%;
-				background-color: #d6d0d0;
-				opacity: 0.8;
-			}
 		}
 
 		&__name {
@@ -338,6 +346,7 @@
 				margin-right: 10px;
 			}
 		}
+
 		&__exp-date {
 			@media only screen and (max-width: $mobile-breakpoint) {
 				font-size: 12px;

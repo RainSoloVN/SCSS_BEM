@@ -82,7 +82,7 @@ html {
   height: 45px;
   width: 45px;
 }
-.header__navbar .logo__img .square {
+.header__navbar .logo__square {
   width: 30px;
   height: 30px;
   background-color: #ffffff;
@@ -90,7 +90,7 @@ html {
   border-radius: 4px;
   opacity: 0.5;
 }
-.header__navbar .logo__img .square:nth-child(2) {
+.header__navbar .logo__square--red {
   position: absolute;
   left: 33.3%;
   top: 33.3%;
@@ -153,15 +153,17 @@ html {
 }
 
 .btn {
-  border: 1px solid #2a2c37;
-  background-color: #2a2c37;
-  color: #ffffff;
   padding: 18px 36px;
+  border: 1px solid #2a2c37;
   border-radius: 10px;
   min-width: 120px;
 }
+.btn--primary {
+  background-color: #2a2c37;
+  color: #ffffff;
+}
 @media only screen and (max-width: 576px) {
-  .btn {
+  .btn--primary {
     width: 100%;
   }
 }
@@ -179,7 +181,6 @@ html {
 }
 @media only screen and (max-width: 576px) {
   .btn--small {
-    width: unset;
     margin-right: 50px;
   }
 }
@@ -329,6 +330,23 @@ html {
 .card-item__icon--circle {
   position: relative;
 }
+.card-item__icon--circle .circle {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+}
+.card-item__icon--circle .circle--dark {
+  background-color: #2a2c37;
+}
+.card-item__icon--circle .circle--light {
+  background-color: #d6d0d0;
+  opacity: 0.8;
+}
+.card-item__icon--circle .circle--absolute {
+  position: absolute;
+  top: 0;
+  left: 60%;
+}
 .card-item__id {
   align-self: center;
   font-size: 28px;
@@ -348,19 +366,6 @@ html {
   align-items: center;
   padding: 0 30px 30px;
   color: #ffffff;
-}
-.card-item__footer .circle {
-  width: 16px;
-  height: 16px;
-  background-color: #2a2c37;
-  border-radius: 50%;
-}
-.card-item__footer .circle:nth-child(2) {
-  position: absolute;
-  top: 0;
-  left: 60%;
-  background-color: #d6d0d0;
-  opacity: 0.8;
 }
 .card-item__name {
   text-transform: uppercase;
