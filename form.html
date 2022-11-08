@@ -7,57 +7,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Form Register</title>
 
-    <!-- FAVICON -->
-    <link rel="icon" href="./assets/images/favicon.ico" type="image/gif"
-      sizes="16x16">
     <!-- Link CSS -->
-    <link rel="stylesheet" href="./assets/css/base.css" />
-    <link rel="stylesheet" href="./assets/css/form.css" />
+    <link rel="stylesheet" href="./assets/scss/form.css" />
   </head>
 
   <body>
     <div class="wrapper">
-      <div class="form-container">
-        <h2 class="signup-heading">Create Account,</h2>
-        <h3 class="signup-subheading">Sign up to get started!</h3>
+      <div class="sign-up">
+        <h2 class="sign-up__heading">Create Account,</h2>
+        <h3 class="sign-up__subheading">Sign up to get started!</h3>
 
-        <form class="signup-form">
-          <div class="form-group">
-            <input id="userName" class="form-field" required>
-            <label for="userName" class="form-label">Your Name *</label>
+        <form class="form">
+          <div class="input-group">
+            <input id="userName" class="input-group__input" required>
+            <label for="userName" class="input-group__label">Your Name *</label>
           </div>
 
-          <div class="form-group">
-            <input type="email" id="email" class="form-field" required>
-            <label for="email" class="form-label">Email *</label>
+          <div class="input-group">
+            <input type="email" id="email" class="input-group__input" required>
+            <label for="email" class="input-group__label">Email *</label>
           </div>
 
-          <div class="form-group">
-            <input type="password" id="password" class="form-field" required>
-            <label for="password" class="form-label">Password *</label>
+          <div class="input-group">
+            <input type="password" id="password" class="input-group__input"
+              required>
+            <label for="password" class="input-group__label">Password *</label>
           </div>
 
-          <div class="form-group">
-            <input id="numberId" class="form-field" required>
-            <label for="numberId" class="form-label">Number ID *</label>
+          <div class="input-group">
+            <input id="numberId" class="input-group__input" required>
+            <label for="numberId" class="input-group__label">Number ID *</label>
           </div>
 
-          <div class="form-group">
-            <input type="date" id="expDate" class="form-field">
-            <label for="expDate" class="form-label">Expire date</label>
+          <div class="input-group">
+            <input type="date" id="expDate" class="input-group__input">
+            <label for="expDate" class="input-group__label">Expire date</label>
           </div>
 
-          <input type="submit" value="Sign up" class="btn btn-primary">
+          <input type="submit" value="Sign up"
+            class="btn btn--primary btn--large">
 
-          <button class="btn btn-facebook">
+          <button class="btn btn--facebook btn--large">
             <img src="./assets/images/facebook-icon.jpg" alt="Facebook icon"
-              class="icon">
+              class="btn__icon">
             Connect with Facebook
           </button>
 
         </form>
 
-        <div class="signin-link">
+        <div class="sign-up__sign-in-link">
           <span>I'm already a member. <a href="#">Sign In</a></span>
         </div>
       </div>
